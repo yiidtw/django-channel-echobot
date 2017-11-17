@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        {% load staticfiles %}
+        <script type="text/javascript" src='{% static "js/jquery.min.js" %}'</script>
+        <script type="text/javascript" src='{% static "js/reconnecting-websocket.min.js" %}'</script>
+        <script type="text/javascript">
+            $(function(){
+                $("#btn_submit").click(function(event){
+                    alert($('#input_msg').val());
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>hello world!!</h1>
+        <form>
+            <input type="text" id="input_msg"></input>
+            <button type="submit" id="btn_submit">say it</button>
+        </form>
+        <div id="chat">
+        </div>
+    </body>
+</html>
