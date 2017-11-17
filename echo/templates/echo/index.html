@@ -1,14 +1,21 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <meta charset="utf-8">
         {% load staticfiles %}
         <script type="text/javascript" src='{% static "js/jquery.min.js" %}'</script>
-        <script type="text/javascript" src='{% static "js/reconnecting-websocket.min.js" %}'</script>
+        <script type="text/javascript" src='{% static "js/jquery.min.js" %}'</script>
         <script type="text/javascript">
             $(function(){
-                $("#btn_submit").click(function(event){
-                    alert($('#input_msg').val());
-                    return false;
+                $("#btn_msg").click(function(event){
+                    var data = $("#input_msg").val();
+                    var chat = $("#chat");
+                    var ele = $("<tr></tr>");
+                    ele.append(
+                        $("<td></td>").text(data)
+                    );
+                    chat.append(ele);
+                    return false
                 });
             });
         </script>
@@ -16,10 +23,21 @@
     <body>
         <h1>hello world!!</h1>
         <form>
-            <input type="text" id="input_msg"></input>
-            <button type="submit" id="btn_submit">say it</button>
+            <table id="chat">
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <input type="text" id="input_msg"></input>
+                            <button type="submit" id="btn_msg">say it</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </form>
-        <div id="chat">
-        </div>
     </body>
 </html>
