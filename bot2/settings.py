@@ -31,7 +31,8 @@ ALLOWED_HOSTS = [os.environ['DJANGO_BOT2_ALLOWED_HOSTS']]
 # Application definition
 
 INSTALLED_APPS = [
-    'echo.apps.EchoConfig',
+    'echo',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)], 
+        },
+        "ROUTING": "echo.routing.channel_routing",
+    },
+}
