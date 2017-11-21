@@ -1,3 +1,7 @@
+// the following code is from vaisaghvt's repo
+// https://github.com/vaisaghvt/django-bot-server-tutorial/blob/websockets/chatbot_tutorial/
+//   templates/chatbot_tutorial/chatbot.html
+
 // Standard javascript code for csrf cookies
 function getCookie(name) {
     var cookieValue = null;
@@ -14,13 +18,14 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
 var csrftoken = getCookie('csrftoken');
-    // });
 
 function csrfSafeMethod(method) {
     // these HTTP methods do not require CSRF protection
     return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
 }
+
 function sameOrigin(url) {
     // test that a given url is a same-origin URL
     // url could be relative or scheme relative or absolute
@@ -34,6 +39,7 @@ function sameOrigin(url) {
         // or any other URL that isn't scheme relative or absolute i.e relative.
         !(/^(\/\/|http:|https:).*/.test(url));
 }
+
 $.ajaxSetup({
     beforeSend: function(xhr, settings) {
         if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
@@ -42,5 +48,5 @@ $.ajaxSetup({
             // Using the CSRFToken value acquired earlier
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
         }
-}
+    }
 });
