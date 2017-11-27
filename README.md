@@ -1,6 +1,9 @@
 django-channel-echobot
 ===
 
+This repo is aimed to build up a web-based bot server prototype with echo function.
+Issues and suggestions are welcome.
+
 ## Category:
 - Full Stack Web 
 
@@ -24,6 +27,7 @@ django-channel-echobot
 
 ## Changelog
 0.1.20171121
+0.2.20171127
 
 ## License
 MIT
