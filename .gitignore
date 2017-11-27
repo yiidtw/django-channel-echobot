@@ -7,3 +7,4 @@ __pycache__/
 /js
 /templates
 *.bak
+/scripts

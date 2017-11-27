@@ -15,15 +15,15 @@ chatsock.onmessage = function(message){
 
     var tbody = $('#container_msg');
     if(data.source == "BOT"){
-        tbody.append('<div class="bubble bubble-left">' + data.text + '</div>');
+        tbody.append('<div class="bubble left">' + data.text + '</div>');
     }else if(data.source == "USER"){
-        tbody.append('<div class="bubble bubble-right">' + data.text + '</div>');
+        tbody.append('<div class="bubble right">' + data.text + '</div>');
     }else{
         console.log("invalid data source...")
     }
 
     $('#container_msg').animate({
-        scrollTop: $('#container_msg')[0].scrollHeight
+        scrollTop: $('#container_msg').scrollHeight[0]
     }, 0);
 
 }

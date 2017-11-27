@@ -23,7 +23,6 @@ django-channel-echobot
 ## Links
 
 ## Changelog
-major.minor.date)
 0.1.20171121
 
 ## License
