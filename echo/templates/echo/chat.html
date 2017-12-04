@@ -15,36 +15,26 @@
         <link rel="stylesheet" href="{% static 'css/customized.css' %}" type="text/css">
     </head>
     <body>
-        <div class="container container-fluid" style="max-width:1200px">
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6" align="center">
-                    <h1>Hello EchoBot!!</h1>
+        <div class="container container-fluid">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 middle-column">
+                <div class="row" align="center">
+                        <h1>Hello, EchoBot!!</h1>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6" align="center" id="container_msg">
-                    <div class="bubble bubble-right">可以問妳什麼問題？</div>
-                    <div class="bubble bubble-left">我現在只有開啟回音功能<br>封測中啦…</div>
-                    <div class="bubble bubble-right">css 測試</div>
-                    <div class="bubble bubble-left">泡泡那種泡泡那種泡</div>
+                <div class="row" style="height: calc(100vh -150px);" id="container_msg">
+                        <div class="bubble bubble-right">What can you do for me?</div>
+                        <div class="bubble bubble-left">I can only echo for now...<br>Neural network is under construction…</div>
                 </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <input type="submit" value="Sumit" style="float: right" class="btn btn-primary" id="btn_msg" />
-                            <div style="overflow: hidden; padding-right: .5em;">
-                                <input type="text" id="input_msg" placeholder="Ask Jenny" class="form-control" style="width: 100%;" />
+                <div class="row">
+                        <form>
+                            <div class="form-group" style="margin: 0 5px 5px 5px">
+                                <input type="submit" value="Sumit" style="float: right" class="btn btn-primary" id="btn_msg" />
+                                <div style="overflow: hidden; padding-right: .5em;">
+                                    <input type="text" id="input_msg" placeholder="Say something..." class="form-control" style="width: 100%;" />
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

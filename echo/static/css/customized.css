@@ -1,3 +1,13 @@
+
+.middle-column {
+    background-color: white; 
+    border-bottom-right-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    border-color: rgba(128, 128, 128, .2);
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
+}
+
 #container_msg {
     height: calc(100vh - 150px);
     overflow-y: auto;
@@ -26,10 +36,10 @@
 }
 
 .bubble-right {
-    float: right;
-    margin: 10px 10px 20px 0px;
     background-color: #2dde98;
     color: white;
+    float: right;
+    margin: 10px 16px 20px 0px; // up right down left
 }
 
 .bubble-right:after{
@@ -50,7 +60,7 @@
 
 .bubble-left {
     float: left;
-    margin: 10px 0px 20px 10px; // up right down left
+    margin: 10px 0px 20px 16px; // up right down left
 }
 
 .bubble-left:after {

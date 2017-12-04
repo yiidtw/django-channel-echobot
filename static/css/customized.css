@@ -1,5 +1,15 @@
+
+.middle-column {
+    background-color: white; 
+    border-bottom-right-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    border-color: rgba(128, 128, 128, .2);
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
+}
+
 #container_msg {
-    height: 80vh;
+    height: calc(100vh - 150px);
     overflow-y: auto;
 }
 
@@ -16,23 +26,27 @@
     color: black;
     background-color:#ddd;
     max-width: 300px;
+    max-height:1000px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+
+    // contenteditable="true";
+
 }
 
-.bubble.left {
-    float: left;
-    margin: 10px 0px 20px 10px; // 上 右 下 左
-}
-
-.bubble.right {
+.bubble-right {
+    background-color: #2dde98;
+    color: white;
     float: right;
-    margin: 10px 10px 20px 0px;
+    margin: 10px 16px 20px 0px; // up right down left
 }
 
-.bubble.left:before{
+.bubble-right:after{
     content:'';
     position:absolute;
-    right:100%;
-    top:0px; // 角的高度
+    left:100%;
+    top:0px;
     width:16px;
     height:16px;
     border-width:0;
@@ -40,11 +54,16 @@
     border-color:transparent;
     border-bottom-width:10px;
     border-bottom-color:currentColor;
-    border-radius:0 0 0 32px;
-    color:#dddddd;
+    border-radius:0 0 32px 0;
+    color:#2dde98;
 }
 
-.bubble.left:after{
+.bubble-left {
+    float: left;
+    margin: 10px 0px 20px 16px; // up right down left
+}
+
+.bubble-left:after {
     content:'';
     position:absolute;
     right:100%;
@@ -59,39 +78,6 @@
     border-radius:0 0 0 32px;
     color:#dddddd;
 }
-
-.bubble.right:before{
-    content:'';
-    position:absolute;
-    left:100%;
-    top:0px; // 角的高度
-    width:16px;
-    height:16px;
-    border-width:0;
-    border-style:solid;
-    border-color:transparent;
-    border-bottom-width:10px;
-    border-bottom-color:currentColor;
-    border-radius:0 0 32px 0;
-    color:#dddddd;
-}
-
-.bubble.right:after{
-    content:'';
-    position:absolute;
-    left:100%;
-    top:0px;
-    width:16px;
-    height:16px;
-    border-width:0;
-    border-style:solid;
-    border-color:transparent;
-    border-bottom-width:10px;
-    border-bottom-color:currentColor;
-    border-radius:0 0 32px 0;
-    color:#dddddd;
-}
-
 
 // horn
 
@@ -134,7 +120,6 @@
     right: 0;
 }
 
-/*
 .bubbleTail{
     display: inline-block;
     position:relative;
@@ -150,4 +135,3 @@
     border-radius:0 0 0 32px;
     color:#dddddd;
 }
-*/
