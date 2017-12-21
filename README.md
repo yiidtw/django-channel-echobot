@@ -2,7 +2,7 @@ django-channel-echobot
 ===
 
 - This repo is aimed to build up a web-based bot server prototype with echo function.
-[Imgur](https://i.imgur.com/sxolyTO.png)
+![Imgur](https://i.imgur.com/sxolyTO.png)
 
 ## Category:
 - Full Stack Web 
